@@ -19,9 +19,14 @@ const projects: Project[] = [
     title: "audoRa — browser-based audio extractor",
     titleNode: (
       <>
-        <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+        <a
+          href="https://audora-audio.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-fuchsia-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity duration-200"
+        >
           audoRa
-        </span>
+        </a>
         <span className="text-zinc-300"> — browser-based audio extractor</span>
       </>
     ),
