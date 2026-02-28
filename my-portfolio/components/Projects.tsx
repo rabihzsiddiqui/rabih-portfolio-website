@@ -136,11 +136,6 @@ export default function Projects() {
               key={index}
               className={`group relative bg-zinc-800/40 border border-zinc-700/50 rounded-2xl p-7 flex flex-col transition-all duration-300 ${project.accentBorder} hover:shadow-xl ${project.accentGlow}`}
             >
-              {/* Gradient top accent */}
-              <div
-                className={`absolute inset-x-0 top-0 h-px rounded-t-2xl bg-gradient-to-r ${project.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
-              />
-
               {/* Icon */}
               {project.liveUrl ? (
                 <a
