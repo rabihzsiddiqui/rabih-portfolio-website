@@ -27,7 +27,7 @@ const projects: Project[] = [
         >
           audoRa
         </a>
-        <span className="text-zinc-300"> — browser-based audio extractor</span>
+        <span className="text-zinc-300 group-hover:text-indigo-300 transition-colors duration-200"> — browser-based audio extractor</span>
       </>
     ),
     description:
