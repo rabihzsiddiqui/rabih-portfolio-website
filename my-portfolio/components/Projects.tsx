@@ -137,23 +137,26 @@ export default function Projects() {
               className={`group relative bg-zinc-800/40 border border-zinc-700/50 rounded-2xl p-7 flex flex-col transition-all duration-300 ${project.accentBorder} hover:shadow-xl ${project.accentGlow}`}
             >
               {/* Icon */}
-              {project.liveUrl ? (
-                <a
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Visit ${project.title}`}
-                  className={`w-12 h-12 rounded-xl bg-gradient-to-br ${project.gradient} border border-zinc-700/50 flex items-center justify-center text-zinc-300 mb-5 hover:scale-110 transition-transform duration-200`}
-                >
-                  {project.icon}
-                </a>
-              ) : (
-                <div
-                  className={`w-12 h-12 rounded-xl bg-gradient-to-br ${project.gradient} border border-zinc-700/50 flex items-center justify-center text-zinc-300 mb-5`}
-                >
-                  {project.icon}
-                </div>
-              )}
+              {(() => {
+                const iconHref = project.liveUrl ?? project.githubUrl ?? project.slidesUrl;
+                return iconHref ? (
+                  <a
+                    href={iconHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Visit ${project.title}`}
+                    className={`w-12 h-12 rounded-xl bg-gradient-to-br ${project.gradient} border border-zinc-700/50 flex items-center justify-center text-zinc-300 mb-5 hover:scale-110 transition-transform duration-200`}
+                  >
+                    {project.icon}
+                  </a>
+                ) : (
+                  <div
+                    className={`w-12 h-12 rounded-xl bg-gradient-to-br ${project.gradient} border border-zinc-700/50 flex items-center justify-center text-zinc-300 mb-5`}
+                  >
+                    {project.icon}
+                  </div>
+                );
+              })()}
 
               {/* Title */}
               <h3 className="text-lg font-semibold text-white mb-3 leading-snug group-hover:text-indigo-300 transition-colors duration-200">
