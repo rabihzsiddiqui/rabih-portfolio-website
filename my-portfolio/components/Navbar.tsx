@@ -28,7 +28,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <a
-          href="#hero"
+          href="/"
           className="text-lg font-semibold text-white tracking-tight hover:opacity-80 transition-opacity"
         >
           Rabih<span className="text-indigo-400">.</span>
