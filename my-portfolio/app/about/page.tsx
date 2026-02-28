@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Bio from "@/components/Bio";
 import Experience from "@/components/Experience";
 import Skills from "@/components/Skills";
 import Education from "@/components/Education";
@@ -14,6 +15,7 @@ export default function About() {
     <main>
       <Navbar />
       <div className="pt-20">
+        <Bio />
         <Experience />
         <Skills />
         <Education />
