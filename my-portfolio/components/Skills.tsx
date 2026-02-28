@@ -84,7 +84,7 @@ const colorMap: Record<string, { tag: string; header: string; icon: string }> = 
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 bg-zinc-900/40">
+    <section id="skills" className="py-24 bg-zinc-950">
       <div className="max-w-5xl mx-auto px-6">
         {/* Section header */}
         <div className="mb-16">

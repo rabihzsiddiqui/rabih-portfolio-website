@@ -1,6 +1,6 @@
 export default function Education() {
   return (
-    <section id="education" className="py-24 bg-zinc-950">
+    <section id="education" className="py-24 bg-zinc-900/40">
       <div className="max-w-5xl mx-auto px-6">
         {/* Section header */}
         <div className="mb-16">
