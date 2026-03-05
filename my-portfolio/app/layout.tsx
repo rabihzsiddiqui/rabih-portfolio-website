@@ -8,7 +8,7 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Rabih Siddiqui — Portfolio",
+  title: "Rabih's Portfolio",
   description:
     "Cognitive Science graduate from UC San Diego with experience in product testing and UX research at Google and Meta.",
 };
