@@ -56,6 +56,46 @@ const projects: Project[] = [
     githubUrl: "https://github.com/rabihzsiddiqui/audora-audio-extractor",
   },
   {
+    title: "compResso — browser-based image compressor",
+    titleNode: (
+      <>
+        <a
+          href="https://compresso-beta.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-gradient-to-r from-orange-400 via-amber-400 to-yellow-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity duration-200"
+        >
+          compResso
+        </a>
+        <span className="text-zinc-300 group-hover:text-indigo-300 transition-colors duration-200"> — browser-based image compressor</span>
+      </>
+    ),
+    description:
+      "Compresses images entirely in the browser with no uploads or servers involved. Supports JPEG, PNG, and WebP formats. Lets users dial in quality settings and preview file size reduction before downloading. Fast, private, and works offline once loaded.",
+    tech: ["Next.js", "TypeScript", "Canvas API", "Tailwind CSS"],
+    icon: (
+      <svg
+        className="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.5}
+          d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+        />
+      </svg>
+    ),
+    gradient: "from-orange-500/20 to-amber-500/20",
+    accentBorder: "hover:border-orange-500/40",
+    accentGlow: "group-hover:shadow-orange-500/10",
+    liveUrl: "https://compresso-beta.vercel.app/",
+    githubUrl: "https://github.com/rabihzsiddiqui/compResso",
+  },
+  {
     title: "Restaurant Rating Analysis Based on Proximity",
     description:
       "Analyzed correlations between restaurant ratings and geographic proximity using real-world dataset. Applied statistical methods and data visualization techniques to identify patterns in how location influences user ratings across review platforms. Findings were presented through interactive Jupyter notebooks with clear charts and narrative commentary.",
