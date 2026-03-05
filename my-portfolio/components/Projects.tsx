@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 
 type Project = {
   title: string;
+  subtitle?: string;
   titleNode?: ReactNode;
   description: string;
   tech: string[];
@@ -16,19 +17,17 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "audoRa — browser-based audio extractor",
+    title: "audoRa",
+    subtitle: "browser-based audio extractor",
     titleNode: (
-      <>
-        <a
-          href="https://audora-audio.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-fuchsia-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity duration-200"
-        >
-          audoRa
-        </a>
-        <span className="text-zinc-300 group-hover:text-indigo-300 transition-colors duration-200"> — browser-based audio extractor</span>
-      </>
+      <a
+        href="https://audora-audio.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-fuchsia-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity duration-200"
+      >
+        audoRa
+      </a>
     ),
     description:
       "Converts video files to MP3 entirely in the browser using ffmpeg.wasm — no uploads, no servers. Supports .mp4, .webm, .mov, .mkv, and more. Lets users control bitrate (128–320 kbps), audio channels, and trim specific segments before export. Works offline once loaded.",
@@ -56,19 +55,17 @@ const projects: Project[] = [
     githubUrl: "https://github.com/rabihzsiddiqui/audora-audio-extractor",
   },
   {
-    title: "compResso — browser-based video compressor",
+    title: "compResso",
+    subtitle: "browser-based video compressor",
     titleNode: (
-      <>
-        <a
-          href="https://compresso-beta.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-gradient-to-r from-orange-400 via-amber-400 to-yellow-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity duration-200"
-        >
-          compResso
-        </a>
-        <span className="text-zinc-300 group-hover:text-indigo-300 transition-colors duration-200"> — browser-based video compressor</span>
-      </>
+      <a
+        href="https://compresso-beta.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-gradient-to-r from-orange-400 via-amber-400 to-yellow-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity duration-200"
+      >
+        compResso
+      </a>
     ),
     description:
       "Compresses video files entirely in the browser with no uploads or servers involved. Supports common formats like .mp4, .webm, and .mov. Lets users control compression settings and preview output size before downloading. Fast, private, and works offline once loaded.",
@@ -199,16 +196,21 @@ export default function Projects() {
               })()}
 
               {/* Title */}
-              <h3 className="text-lg font-semibold text-white mb-3 leading-snug group-hover:text-indigo-300 transition-colors duration-200">
-                {project.titleNode ?? (() => {
-                  const titleHref = project.liveUrl ?? project.githubUrl ?? project.slidesUrl;
-                  return titleHref ? (
-                    <a href={titleHref} target="_blank" rel="noopener noreferrer">
-                      {project.title}
-                    </a>
-                  ) : project.title;
-                })()}
-              </h3>
+              <div className="mb-3">
+                <h3 className="text-lg font-semibold text-white leading-snug group-hover:text-indigo-300 transition-colors duration-200">
+                  {project.titleNode ?? (() => {
+                    const titleHref = project.liveUrl ?? project.githubUrl ?? project.slidesUrl;
+                    return titleHref ? (
+                      <a href={titleHref} target="_blank" rel="noopener noreferrer">
+                        {project.title}
+                      </a>
+                    ) : project.title;
+                  })()}
+                </h3>
+                {project.subtitle && (
+                  <p className="text-sm text-zinc-500 mt-0.5">{project.subtitle}</p>
+                )}
+              </div>
 
               {/* Description */}
               <p className="text-sm text-zinc-400 leading-relaxed mb-6 flex-1">
