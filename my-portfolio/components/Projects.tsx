@@ -56,7 +56,7 @@ const projects: Project[] = [
     githubUrl: "https://github.com/rabihzsiddiqui/audora-audio-extractor",
   },
   {
-    title: "compResso — browser-based image compressor",
+    title: "compResso — browser-based video compressor",
     titleNode: (
       <>
         <a
@@ -67,12 +67,12 @@ const projects: Project[] = [
         >
           compResso
         </a>
-        <span className="text-zinc-300 group-hover:text-indigo-300 transition-colors duration-200"> — browser-based image compressor</span>
+        <span className="text-zinc-300 group-hover:text-indigo-300 transition-colors duration-200"> — browser-based video compressor</span>
       </>
     ),
     description:
-      "Compresses images entirely in the browser with no uploads or servers involved. Supports JPEG, PNG, and WebP formats. Lets users dial in quality settings and preview file size reduction before downloading. Fast, private, and works offline once loaded.",
-    tech: ["Next.js", "TypeScript", "Canvas API", "Tailwind CSS"],
+      "Compresses video files entirely in the browser with no uploads or servers involved. Supports common formats like .mp4, .webm, and .mov. Lets users control compression settings and preview output size before downloading. Fast, private, and works offline once loaded.",
+    tech: ["Next.js", "TypeScript", "ffmpeg.wasm", "Tailwind CSS"],
     icon: (
       <svg
         className="w-6 h-6"
