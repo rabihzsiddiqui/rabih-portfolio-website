@@ -82,7 +82,7 @@ const projects: Project[] = [
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={1.5}
-          d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+          d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
         />
       </svg>
     ),
@@ -119,7 +119,8 @@ const projects: Project[] = [
     githubUrl: "https://github.com/rabihzsiddiqui/Restaurant_Rating_Analysis/blob/dataproject/Restaurant_Rating_Analysis_Complete.ipynb",
   },
   {
-    title: "V.I.S.A — Visual Impairment & Sensory Aid",
+    title: "V.I.S.A",
+    subtitle: "visual impairment & sensory aid",
     description:
       "Designed a conceptual assistive technology solution for individuals with visual impairments. Used collaborative mind-mapping and Google Workspace to outline a multi-sensory aid system integrating haptic feedback, spatial audio cues, and environmental awareness features. The project emphasized inclusive design principles and real-world usability for the visually impaired community.",
     tech: ["Google Workspace", "Mind Maps", "UX Design", "Accessibility"],
