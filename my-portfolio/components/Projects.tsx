@@ -106,7 +106,7 @@ const projects: Project[] = [
       </a>
     ),
     description:
-      "A client-side color accessibility tool that goes beyond standard WCAG contrast ratios. Simulates how color pairings appear under different types of color vision deficiency, generates accessible palette alternatives, and grounds everything in real vision science. Built by someone who is colorblind, for designers who want to build for everyone.",
+      "Still a work in progress. A client-side color accessibility tool that goes beyond standard WCAG contrast ratios. Simulates how color pairings appear under different types of color vision deficiency, generates accessible palette alternatives, and grounds everything in real vision science. Built by someone who is colorblind, for designers who want to build for everyone.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS"],
     icon: (
       <svg
