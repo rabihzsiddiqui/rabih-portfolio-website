@@ -30,7 +30,7 @@ const projects: Project[] = [
       </a>
     ),
     description:
-      "Converts video files to MP3 entirely in the browser using ffmpeg.wasm — no uploads, no servers. Supports .mp4, .webm, .mov, .mkv, and more. Lets users control bitrate (128–320 kbps), audio channels, and trim specific segments before export. Works offline once loaded.",
+      "Pulls audio from video files right in the browser using ffmpeg.wasm, so nothing gets uploaded anywhere. Supports common formats like MP4, WebM, MOV, and MKV, with options for bitrate, channels, and trimming before export.",
     tech: ["Next.js", "TypeScript", "ffmpeg.wasm", "Tailwind CSS"],
     icon: (
       <svg
@@ -68,7 +68,7 @@ const projects: Project[] = [
       </a>
     ),
     description:
-      "Compresses video files entirely in the browser with no uploads or servers involved. Supports common formats like .mp4, .webm, and .mov. Lets users control compression settings and preview output size before downloading. Fast, private, and works offline once loaded.",
+      "Compresses video files directly in the browser without sending them to a server. Lets users adjust compression settings, compare file size changes, and export a smaller file locally. Made to keep video compression quick, simple, and private.",
     tech: ["Next.js", "TypeScript", "ffmpeg.wasm", "Tailwind CSS"],
     icon: (
       <svg
@@ -106,7 +106,7 @@ const projects: Project[] = [
       </a>
     ),
     description:
-      "Still a work in progress. A client-side color accessibility tool that goes beyond standard WCAG contrast ratios. Simulates how color pairings appear under different types of color vision deficiency, generates accessible palette alternatives, and grounds everything in real vision science. Built by someone who is colorblind, for designers who want to build for everyone.",
+      "Still a work in progress. A client-side color accessibility tool that goes beyond basic contrast checks by showing how color pairings appear under different types of color vision deficiency and suggesting better alternatives. Built by someone who is colorblind, for people who want to design more accessibly.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS"],
     icon: (
       <svg
@@ -144,7 +144,7 @@ const projects: Project[] = [
       </a>
     ),
     description:
-      "A prototype interface for a personal AI companion and assistant. Built around four operational states (idle, listening, thinking, and speaking) with a minimalist frosted-glass UI and WebGL-powered visual effects via GLSL shaders. Designed as the foundation for a long-term assistant project.",
+      "A prototype interface for a personal AI companion and assistant. Built around four states: idle, listening, thinking, and speaking, with a minimal frosted-glass UI and WebGL-based visual effects through GLSL shaders. This is the starting point for a larger long-term assistant project.",
     tech: ["JavaScript", "Vite", "GLSL", "WebGL", "HTML/CSS"],
     icon: (
       <svg
@@ -171,7 +171,7 @@ const projects: Project[] = [
   {
     title: "Restaurant Rating Analysis Based on Proximity",
     description:
-      "Analyzed correlations between restaurant ratings and geographic proximity using real-world dataset. Applied statistical methods and data visualization techniques to identify patterns in how location influences user ratings across review platforms. Findings were presented through interactive Jupyter notebooks with clear charts and narrative commentary.",
+      "Looked at whether restaurant ratings seemed to relate to geographic proximity using a real review dataset. Built in Jupyter with Python, pandas, and data visualization to explore patterns and present the results clearly.",
     tech: ["Python", "Jupyter Notebook", "Pandas", "Matplotlib"],
     icon: (
       <svg
@@ -198,7 +198,7 @@ const projects: Project[] = [
     title: "V.I.S.A",
     subtitle: "visual impairment & sensory aid",
     description:
-      "Designed a conceptual assistive technology solution for individuals with visual impairments. Used collaborative mind-mapping and Google Workspace to outline a multi-sensory aid system integrating haptic feedback, spatial audio cues, and environmental awareness features. The project emphasized inclusive design principles and real-world usability for the visually impaired community.",
+      "A concept for an assistive tool that helps visually impaired users navigate their surroundings with more confidence. The idea combines haptic feedback, spatial audio, and environmental awareness, with accessibility and usability kept at the center of the project.",
     tech: ["Google Workspace", "Mind Maps", "UX Design", "Accessibility"],
     icon: (
       <svg
