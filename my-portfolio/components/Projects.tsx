@@ -131,6 +131,44 @@ const projects: Project[] = [
     githubUrl: "https://github.com/rabihzsiddiqui/spectRa",
   },
   {
+    title: "nyra",
+    subtitle: "prototype companion interface",
+    titleNode: (
+      <a
+        href="https://nyra-prototype.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-gradient-to-r from-indigo-400 to-sky-300 bg-clip-text text-transparent hover:opacity-80 transition-opacity duration-200"
+      >
+        nyra
+      </a>
+    ),
+    description:
+      "A prototype interface for a personal AI companion and assistant. Built around four operational states (idle, listening, thinking, and speaking) with a minimalist frosted-glass UI and WebGL-powered visual effects via GLSL shaders. Designed as the foundation for a long-term assistant project.",
+    tech: ["JavaScript", "Vite", "GLSL", "WebGL", "HTML/CSS"],
+    icon: (
+      <svg
+        className="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.5}
+          d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-3 3-3-3z"
+        />
+      </svg>
+    ),
+    gradient: "from-indigo-500/20 to-sky-500/20",
+    accentBorder: "hover:border-indigo-500/40",
+    accentGlow: "group-hover:shadow-indigo-500/10",
+    liveUrl: "https://nyra-prototype.vercel.app/",
+    githubUrl: "https://github.com/rabihzsiddiqui/nyra-prototype",
+  },
+  {
     title: "Restaurant Rating Analysis Based on Proximity",
     description:
       "Analyzed correlations between restaurant ratings and geographic proximity using real-world dataset. Applied statistical methods and data visualization techniques to identify patterns in how location influences user ratings across review platforms. Findings were presented through interactive Jupyter notebooks with clear charts and narrative commentary.",
