@@ -17,7 +17,7 @@ const skillGroups = [
         />
       </svg>
     ),
-    skills: ["Python", "Java", "JavaScript", "HTML", "CSS", "R"],
+    skills: ["Python", "Java", "JavaScript", "TypeScript", "HTML", "CSS", "R"],
     color: "indigo",
   },
   {
@@ -38,7 +38,7 @@ const skillGroups = [
         />
       </svg>
     ),
-    skills: ["Figma", "Git", "Microsoft Office Suite", "Google Workspace", "Slack"],
+    skills: ["Next.js", "Tailwind CSS", "Figma", "Git", "Microsoft Office Suite", "Google Workspace", "Slack"],
     color: "violet",
   },
   {
