@@ -131,6 +131,44 @@ const projects: Project[] = [
     githubUrl: "https://github.com/rabihzsiddiqui/spectRa",
   },
   {
+    title: "pomodoRo",
+    subtitle: "browser-native pomodoro timer",
+    titleNode: (
+      <a
+        href="https://romodoro.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-gradient-to-r from-red-400 to-rose-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity duration-200"
+      >
+        pomodoRo
+      </a>
+    ),
+    description:
+      "A browser-native Pomodoro timer with configurable work and break cycles. Fully keyboard-driven with spacebar, skip, and reset controls. Includes a circular SVG countdown ring, session tracking via localStorage, optional audio chimes, browser notifications, and a dynamic favicon that updates with the timer state.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vitest"],
+    icon: (
+      <svg
+        className="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.5}
+          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
+      </svg>
+    ),
+    gradient: "from-red-500/20 to-rose-500/20",
+    accentBorder: "hover:border-red-500/40",
+    accentGlow: "group-hover:shadow-red-500/10",
+    liveUrl: "https://romodoro.vercel.app/",
+    githubUrl: "https://github.com/rabihzsiddiqui/pomo",
+  },
+  {
     title: "nyra",
     subtitle: "prototype companion interface",
     titleNode: (
