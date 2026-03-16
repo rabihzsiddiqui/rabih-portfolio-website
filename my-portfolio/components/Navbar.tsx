@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -8,15 +8,38 @@ const navLinks = [
   { label: "About", href: "/about" },
 ];
 
+const EMAIL = "rabihzsiddiqui@gmail.com";
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [emailRevealed, setEmailRevealed] = useState(false);
+  const [copied, setCopied] = useState(false);
+  const contactRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (!emailRevealed) return;
+    const handler = (e: MouseEvent) => {
+      if (contactRef.current && !contactRef.current.contains(e.target as Node)) {
+        setEmailRevealed(false);
+        setCopied(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, [emailRevealed]);
+
+  const handleCopy = async () => {
+    await navigator.clipboard.writeText(EMAIL);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   return (
     <nav
@@ -46,12 +69,40 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <a
-            href="mailto:rabihzsiddiqui@gmail.com"
-            className="text-sm px-4 py-2 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white font-medium transition-all duration-200 hover:scale-105"
-          >
-            Contact
-          </a>
+          <div ref={contactRef} className="relative">
+            {!emailRevealed ? (
+              <button
+                onClick={() => setEmailRevealed(true)}
+                className="text-sm px-4 py-2 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white font-medium transition-all duration-200 hover:scale-105"
+              >
+                Contact
+              </button>
+            ) : (
+              <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-800 border border-zinc-700 transition-all duration-300">
+                <a
+                  href={`mailto:${EMAIL}`}
+                  className="text-sm text-zinc-300 hover:text-white transition-colors duration-200"
+                >
+                  {EMAIL}
+                </a>
+                <button
+                  onClick={handleCopy}
+                  aria-label={copied ? "Copied" : "Copy email"}
+                  className="text-zinc-500 hover:text-indigo-400 transition-colors duration-200 flex-shrink-0"
+                >
+                  {copied ? (
+                    <svg className="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  ) : (
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-4 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                    </svg>
+                  )}
+                </button>
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Mobile hamburger */}
@@ -105,13 +156,39 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <a
-            href="mailto:rabihzsiddiqui@gmail.com"
-            className="text-sm text-center px-4 py-2.5 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white font-medium transition-colors duration-200 mt-1"
-            onClick={() => setMenuOpen(false)}
-          >
-            Contact
-          </a>
+          {!emailRevealed ? (
+            <button
+              onClick={() => setEmailRevealed(true)}
+              className="text-sm text-center w-full px-4 py-2.5 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white font-medium transition-colors duration-200 mt-1"
+            >
+              Contact
+            </button>
+          ) : (
+            <div className="flex items-center justify-between gap-2 px-4 py-2.5 rounded-full bg-zinc-800 border border-zinc-700 mt-1">
+              <a
+                href={`mailto:${EMAIL}`}
+                className="text-sm text-zinc-300 hover:text-white transition-colors duration-200 truncate"
+                onClick={() => setMenuOpen(false)}
+              >
+                {EMAIL}
+              </a>
+              <button
+                onClick={() => { handleCopy(); setTimeout(() => setMenuOpen(false), 1200); }}
+                aria-label={copied ? "Copied" : "Copy email"}
+                className="text-zinc-500 hover:text-indigo-400 transition-colors duration-200 flex-shrink-0"
+              >
+                {copied ? (
+                  <svg className="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                ) : (
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-4 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
+                )}
+              </button>
+            </div>
+          )}
         </div>
       )}
     </nav>

@@ -1,6 +1,32 @@
+"use client";
+
 import Image from "next/image";
+import { useState, useRef, useEffect } from "react";
+
+const EMAIL = "rabihzsiddiqui@gmail.com";
 
 export default function Hero() {
+  const [emailRevealed, setEmailRevealed] = useState(false);
+  const [copied, setCopied] = useState(false);
+  const emailRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!emailRevealed) return;
+    const handler = (e: MouseEvent) => {
+      if (emailRef.current && !emailRef.current.contains(e.target as Node)) {
+        setEmailRevealed(false);
+        setCopied(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, [emailRevealed]);
+
+  const handleCopy = async () => {
+    await navigator.clipboard.writeText(EMAIL);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
   return (
     <section
       id="hero"
@@ -98,26 +124,54 @@ export default function Hero() {
             LinkedIn
           </a>
 
-          <a
-            href="mailto:rabihzsiddiqui@gmail.com"
-            className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full border border-zinc-700 hover:border-indigo-500/60 bg-zinc-800/50 hover:bg-zinc-800 text-zinc-300 hover:text-white font-medium transition-all duration-200 hover:scale-105"
-          >
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-              />
-            </svg>
-            Email me!
-          </a>
+          <div ref={emailRef}>
+            {!emailRevealed ? (
+              <button
+                onClick={() => setEmailRevealed(true)}
+                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full border border-zinc-700 hover:border-indigo-500/60 bg-zinc-800/50 hover:bg-zinc-800 text-zinc-300 hover:text-white font-medium transition-all duration-200 hover:scale-105"
+              >
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+                Email me
+              </button>
+            ) : (
+              <div className="inline-flex items-center gap-3 px-6 py-3.5 rounded-full border border-zinc-700 bg-zinc-800/50 transition-all duration-300">
+                <a
+                  href={`mailto:${EMAIL}`}
+                  className="text-sm text-zinc-300 hover:text-white transition-colors duration-200"
+                >
+                  {EMAIL}
+                </a>
+                <button
+                  onClick={handleCopy}
+                  aria-label={copied ? "Copied" : "Copy email"}
+                  className="text-zinc-500 hover:text-indigo-400 transition-colors duration-200 flex-shrink-0"
+                >
+                  {copied ? (
+                    <svg className="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  ) : (
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-4 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                    </svg>
+                  )}
+                </button>
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Scroll indicator */}
