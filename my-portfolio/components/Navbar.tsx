@@ -26,6 +26,7 @@ export default function Navbar() {
   useEffect(() => {
     if (!emailRevealed) return;
     const handler = (e: MouseEvent) => {
+      if (menuOpen) return;
       if (contactRef.current && !contactRef.current.contains(e.target as Node)) {
         setEmailRevealed(false);
         setCopied(false);
@@ -33,7 +34,7 @@ export default function Navbar() {
     };
     document.addEventListener("mousedown", handler);
     return () => document.removeEventListener("mousedown", handler);
-  }, [emailRevealed]);
+  }, [emailRevealed, menuOpen]);
 
   const handleCopy = async () => {
     await navigator.clipboard.writeText(EMAIL);
