@@ -3,7 +3,7 @@ const experiences = [
     role: "Trusted Tester",
     company: "Google",
     period: "Sept 2021 – Present",
-    badge: "Full-time",
+    badge: "Voluntary",
     description:
       "Participate in early-stage testing of Google's experimental apps, features, and hardware products. Deliver structured reports covering usability, functionality, and accessibility, helping teams prioritize fixes and improvements before public release.",
     tags: ["Product Testing", "QA", "Accessibility", "Usability"],
@@ -12,7 +12,7 @@ const experiences = [
     role: "User Research Participant",
     company: "Google",
     period: "Nov 2023 – Present",
-    badge: "Contract",
+    badge: "Voluntary",
     description:
       "Engage in moderated and unmoderated research sessions — including interviews, diary studies, and prototype evaluations — to inform product design decisions across Google's product suite. Provide detailed qualitative feedback on user flows and pain points.",
     tags: ["UX Research", "User Interviews", "Prototype Testing"],
@@ -21,7 +21,7 @@ const experiences = [
     role: "User Research Participant",
     company: "Meta",
     period: "Mar 2025 – Present",
-    badge: "Contract",
+    badge: "Voluntary",
     description:
       "Participate in research studies evaluating Meta's emerging social platforms and technologies. Deliver actionable feedback on interaction design, feature discoverability, and end-to-end user experience across web and mobile surfaces.",
     tags: ["UX Research", "Social Platforms", "Interaction Design"],
@@ -38,8 +38,7 @@ const experiences = [
 ];
 
 const badgeColors: Record<string, string> = {
-  "Full-time": "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
-  Contract: "bg-blue-500/10 text-blue-400 border-blue-500/20",
+  Voluntary: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
   Freelance: "bg-amber-500/10 text-amber-400 border-amber-500/20",
 };
 

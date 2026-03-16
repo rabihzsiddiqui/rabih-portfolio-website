@@ -6,7 +6,7 @@ import Education from "@/components/Education";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "About — Rabih Siddiqui",
+  title: "About Rabih Siddiqui",
   description: "Experience, skills, and education.",
 };
 
