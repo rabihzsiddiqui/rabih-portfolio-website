@@ -169,6 +169,44 @@ const projects: Project[] = [
     githubUrl: "https://github.com/rabihzsiddiqui/pomo",
   },
   {
+    title: "scRibe",
+    subtitle: "minimalist writing workspace",
+    titleNode: (
+      <a
+        href="https://sc-ribe.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity duration-200"
+      >
+        scRibe
+      </a>
+    ),
+    description:
+      "A distraction-free writing workspace with write, preview, and read modes. Tracks word count, character count, reading time, and session progress in real time. Includes a built-in Pomodoro timer for focused writing sessions and a dark/light theme that persists across visits.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+    icon: (
+      <svg
+        className="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.5}
+          d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+        />
+      </svg>
+    ),
+    gradient: "from-violet-500/20 to-purple-500/20",
+    accentBorder: "hover:border-violet-500/40",
+    accentGlow: "group-hover:shadow-violet-500/10",
+    liveUrl: "https://sc-ribe.vercel.app/",
+    githubUrl: "https://github.com/rabihzsiddiqui/scRibe",
+  },
+  {
     title: "nyra",
     subtitle: "prototype companion interface",
     titleNode: (
