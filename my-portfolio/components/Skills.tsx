@@ -38,7 +38,7 @@ const skillGroups = [
         />
       </svg>
     ),
-    skills: ["Next.js", "Tailwind CSS", "Figma", "Git", "Microsoft Office Suite", "Google Workspace", "Slack"],
+    skills: ["Next.js", "Tailwind CSS", "Vitest", "Figma", "Git", "Microsoft Office Suite", "Google Workspace", "Slack"],
     color: "violet",
   },
   {
