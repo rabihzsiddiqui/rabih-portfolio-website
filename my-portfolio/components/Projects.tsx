@@ -70,25 +70,6 @@ const projects: Project[] = [
     githubUrl: "https://github.com/rabihzsiddiqui/scReen",
   },
   {
-    title: "scRibe",
-    subtitle: "minimalist writing workspace",
-    titleNode: (
-      <a
-        href="https://sc-ribe.vercel.app/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity duration-200"
-      >
-        scRibe
-      </a>
-    ),
-    description:
-      "A distraction-free writing workspace with write, preview, and read modes. Tracks word count, character count, reading time, and session progress in real time. Includes a built-in Pomodoro timer for focused writing sessions and a dark/light theme that persists across visits.",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
-    liveUrl: "https://sc-ribe.vercel.app/",
-    githubUrl: "https://github.com/rabihzsiddiqui/scRibe",
-  },
-  {
     title: "pomodoRo",
     subtitle: "browser-native pomodoro timer",
     titleNode: (
@@ -106,6 +87,25 @@ const projects: Project[] = [
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vitest"],
     liveUrl: "https://romodoro.vercel.app/",
     githubUrl: "https://github.com/rabihzsiddiqui/pomo",
+  },
+  {
+    title: "scRibe",
+    subtitle: "minimalist writing workspace",
+    titleNode: (
+      <a
+        href="https://sc-ribe.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity duration-200"
+      >
+        scRibe
+      </a>
+    ),
+    description:
+      "A distraction-free writing workspace with write, preview, and read modes. Tracks word count, character count, reading time, and session progress in real time. Includes a built-in Pomodoro timer for focused writing sessions and a dark/light theme that persists across visits.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+    liveUrl: "https://sc-ribe.vercel.app/",
+    githubUrl: "https://github.com/rabihzsiddiqui/scRibe",
   },
   {
     title: "spectRa",
