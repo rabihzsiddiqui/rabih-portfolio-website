@@ -6,10 +6,6 @@ type Project = {
   titleNode?: ReactNode;
   description: string;
   tech: string[];
-  icon: ReactNode;
-  gradient: string;
-  accentBorder: string;
-  accentGlow: string;
   liveUrl?: string;
   githubUrl?: string;
   slidesUrl?: string;
@@ -32,25 +28,6 @@ const projects: Project[] = [
     description:
       "Pulls audio from video files right in the browser using ffmpeg.wasm, so nothing gets uploaded anywhere. Supports common formats like MP4, WebM, MOV, and MKV, with options for bitrate, channels, and trimming before export.",
     tech: ["Next.js", "TypeScript", "ffmpeg.wasm", "Tailwind CSS"],
-    icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"
-        />
-      </svg>
-    ),
-    gradient: "from-sky-500/20 to-cyan-500/20",
-    accentBorder: "hover:border-sky-500/40",
-    accentGlow: "group-hover:shadow-sky-500/10",
     liveUrl: "https://audora-audio.vercel.app/",
     githubUrl: "https://github.com/rabihzsiddiqui/audora-audio-extractor",
   },
@@ -70,103 +47,27 @@ const projects: Project[] = [
     description:
       "Compresses video files directly in the browser without sending them to a server. Lets users adjust compression settings, compare file size changes, and export a smaller file locally. Made to keep video compression quick, simple, and private.",
     tech: ["Next.js", "TypeScript", "ffmpeg.wasm", "Tailwind CSS"],
-    icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
-        />
-      </svg>
-    ),
-    gradient: "from-orange-500/20 to-amber-500/20",
-    accentBorder: "hover:border-orange-500/40",
-    accentGlow: "group-hover:shadow-orange-500/10",
     liveUrl: "https://compresso-beta.vercel.app/",
     githubUrl: "https://github.com/rabihzsiddiqui/compResso",
   },
   {
-    title: "spectRa",
-    subtitle: "color accessibility and CVD simulator",
+    title: "scReen",
+    subtitle: "browser-native display comparison tool",
     titleNode: (
       <a
-        href="https://spectra-oculi.vercel.app/"
+        href="https://sc-reen.vercel.app/"
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-gradient-to-r from-green-400 to-red-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity duration-200"
+        className="bg-gradient-to-r from-sky-400 to-teal-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity duration-200"
       >
-        spectRa
+        scReen
       </a>
     ),
     description:
-      "Still a work in progress. A client-side color accessibility tool that goes beyond basic contrast checks by showing how color pairings appear under different types of color vision deficiency and suggesting better alternatives. Built by someone who is colorblind, for people who want to design more accessibly.",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
-    icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
-        />
-      </svg>
-    ),
-    gradient: "from-green-500/20 to-red-500/20",
-    accentBorder: "hover:border-green-500/40",
-    accentGlow: "group-hover:shadow-green-500/10",
-    liveUrl: "https://spectra-oculi.vercel.app/",
-    githubUrl: "https://github.com/rabihzsiddiqui/spectRa",
-  },
-  {
-    title: "pomodoRo",
-    subtitle: "browser-native pomodoro timer",
-    titleNode: (
-      <a
-        href="https://romodoro.vercel.app/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="bg-gradient-to-r from-red-400 to-rose-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity duration-200"
-      >
-        pomodoRo
-      </a>
-    ),
-    description:
-      "A browser-native Pomodoro timer with configurable work and break cycles. Fully keyboard-driven with spacebar, skip, and reset controls. Includes a circular SVG countdown ring, session tracking via localStorage, optional audio chimes, browser notifications, and a dynamic favicon that updates with the timer state.",
+      "A browser-native display comparison tool that renders any two screens side by side at accurate physical scale. Choose from a preset library of phones, tablets, laptops, monitors, and TVs, or enter custom dimensions. Everything runs locally with no uploads and no tracking.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vitest"],
-    icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-        />
-      </svg>
-    ),
-    gradient: "from-red-500/20 to-rose-500/20",
-    accentBorder: "hover:border-red-500/40",
-    accentGlow: "group-hover:shadow-red-500/10",
-    liveUrl: "https://romodoro.vercel.app/",
-    githubUrl: "https://github.com/rabihzsiddiqui/pomo",
+    liveUrl: "https://sc-reen.vercel.app/",
+    githubUrl: "https://github.com/rabihzsiddiqui/scReen",
   },
   {
     title: "scRibe",
@@ -184,65 +85,46 @@ const projects: Project[] = [
     description:
       "A distraction-free writing workspace with write, preview, and read modes. Tracks word count, character count, reading time, and session progress in real time. Includes a built-in Pomodoro timer for focused writing sessions and a dark/light theme that persists across visits.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS"],
-    icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
-        />
-      </svg>
-    ),
-    gradient: "from-violet-500/20 to-purple-500/20",
-    accentBorder: "hover:border-violet-500/40",
-    accentGlow: "group-hover:shadow-violet-500/10",
     liveUrl: "https://sc-ribe.vercel.app/",
     githubUrl: "https://github.com/rabihzsiddiqui/scRibe",
   },
   {
-    title: "scReen",
-    subtitle: "browser-native screen size comparator",
+    title: "pomodoRo",
+    subtitle: "browser-native pomodoro timer",
     titleNode: (
       <a
-        href="https://sc-reen.vercel.app/"
+        href="https://romodoro.vercel.app/"
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity duration-200"
+        className="bg-gradient-to-r from-red-400 to-rose-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity duration-200"
       >
-        scReen
+        pomodoRo
       </a>
     ),
     description:
-      "A browser-native display comparison tool that renders any two screens side-by-side at accurate physical scale. Choose from a preset library of phones, tablets, laptops, monitors, and TVs, or enter custom dimensions. Everything runs locally with no uploads and no tracking.",
+      "A browser-native Pomodoro timer with configurable work and break cycles. Fully keyboard-driven with spacebar, skip, and reset controls. Includes a circular SVG countdown ring, session tracking via localStorage, optional audio chimes, browser notifications, and a dynamic favicon that updates with the timer state.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vitest"],
-    icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        aria-hidden="true"
+    liveUrl: "https://romodoro.vercel.app/",
+    githubUrl: "https://github.com/rabihzsiddiqui/pomo",
+  },
+  {
+    title: "spectRa",
+    subtitle: "color accessibility and CVD simulator",
+    titleNode: (
+      <a
+        href="https://spectra-oculi.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-gradient-to-r from-green-400 to-red-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity duration-200"
       >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-        />
-      </svg>
+        spectRa
+      </a>
     ),
-    gradient: "from-blue-500/20 to-teal-500/20",
-    accentBorder: "hover:border-blue-500/40",
-    accentGlow: "group-hover:shadow-blue-500/10",
-    liveUrl: "https://sc-reen.vercel.app/",
-    githubUrl: "https://github.com/rabihzsiddiqui/scReen",
+    description:
+      "Still a work in progress. A client-side color accessibility tool that goes beyond basic contrast checks by showing how color pairings appear under different types of color vision deficiency and suggesting better alternatives. Built by someone who is colorblind, for people who want to design more accessibly.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+    liveUrl: "https://spectra-oculi.vercel.app/",
+    githubUrl: "https://github.com/rabihzsiddiqui/spectRa",
   },
   {
     title: "nyra",
@@ -260,25 +142,6 @@ const projects: Project[] = [
     description:
       "A prototype interface for a personal AI companion and assistant. Built around four states: idle, listening, thinking, and speaking, with a minimal frosted-glass UI and WebGL-based visual effects through GLSL shaders. This is the starting point for a larger long-term assistant project.",
     tech: ["JavaScript", "Vite", "GLSL", "WebGL", "HTML/CSS"],
-    icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-3 3-3-3z"
-        />
-      </svg>
-    ),
-    gradient: "from-indigo-500/20 to-sky-500/20",
-    accentBorder: "hover:border-indigo-500/40",
-    accentGlow: "group-hover:shadow-indigo-500/10",
     liveUrl: "https://nyra-prototype.vercel.app/",
     githubUrl: "https://github.com/rabihzsiddiqui/nyra-prototype",
   },
@@ -287,59 +150,17 @@ const projects: Project[] = [
     description:
       "Looked at whether restaurant ratings seemed to relate to geographic proximity using a real review dataset. Built in Jupyter with Python, pandas, and data visualization to explore patterns and present the results clearly.",
     tech: ["Python", "Jupyter Notebook", "Pandas", "Matplotlib"],
-    icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"
-        />
-      </svg>
-    ),
-    gradient: "from-indigo-500/20 to-blue-500/20",
-    accentBorder: "hover:border-indigo-500/40",
-    accentGlow: "group-hover:shadow-indigo-500/10",
-    githubUrl: "https://github.com/rabihzsiddiqui/Restaurant_Rating_Analysis/blob/dataproject/Restaurant_Rating_Analysis_Complete.ipynb",
+    githubUrl:
+      "https://github.com/rabihzsiddiqui/Restaurant_Rating_Analysis/blob/dataproject/Restaurant_Rating_Analysis_Complete.ipynb",
   },
   {
     title: "V.I.S.A",
-    subtitle: "visual impairment & sensory aid",
+    subtitle: "visual impairment and sensory aid",
     description:
       "A concept for an assistive tool that helps visually impaired users navigate their surroundings with more confidence. The idea combines haptic feedback, spatial audio, and environmental awareness, with accessibility and usability kept at the center of the project.",
     tech: ["Google Workspace", "Mind Maps", "UX Design", "Accessibility"],
-    icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-        />
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-        />
-      </svg>
-    ),
-    gradient: "from-violet-500/20 to-purple-500/20",
-    accentBorder: "hover:border-violet-500/40",
-    accentGlow: "group-hover:shadow-violet-500/10",
-    slidesUrl: "https://docs.google.com/presentation/d/1_LtnJbvFi7YNItDpYPvUZvkwUi15jeFHNBYP9KKGZSw/edit?usp=sharing",
+    slidesUrl:
+      "https://docs.google.com/presentation/d/1_LtnJbvFi7YNItDpYPvUZvkwUi15jeFHNBYP9KKGZSw/edit?usp=sharing",
   },
 ];
 
@@ -357,115 +178,104 @@ export default function Projects() {
           </h2>
         </div>
 
-        {/* Project cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className={`group relative bg-zinc-800/40 border border-zinc-700/50 rounded-2xl p-7 flex flex-col transition-all duration-300 ${project.accentBorder} hover:shadow-xl ${project.accentGlow}`}
-            >
-              {/* Icon */}
-              {(() => {
-                const iconHref = project.liveUrl ?? project.githubUrl ?? project.slidesUrl;
-                return iconHref ? (
-                  <a
-                    href={iconHref}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`Visit ${project.title}`}
-                    className={`w-12 h-12 rounded-xl bg-gradient-to-br ${project.gradient} border border-zinc-700/50 flex items-center justify-center text-zinc-300 mb-5 hover:scale-110 transition-transform duration-200`}
-                  >
-                    {project.icon}
-                  </a>
-                ) : (
-                  <div
-                    className={`w-12 h-12 rounded-xl bg-gradient-to-br ${project.gradient} border border-zinc-700/50 flex items-center justify-center text-zinc-300 mb-5`}
-                  >
-                    {project.icon}
+        {/* Project list */}
+        <div>
+          {projects.map((project, index) => {
+            const href =
+              project.liveUrl ?? project.githubUrl ?? project.slidesUrl;
+
+            return (
+              <div
+                key={index}
+                className="group relative border-t border-zinc-800/80 py-10 last:border-b last:border-zinc-800/80"
+              >
+                {/* Left accent bar */}
+                <div className="absolute left-0 inset-y-0 w-px bg-indigo-500/0 group-hover:bg-indigo-500/50 transition-colors duration-300" />
+
+                <div className="flex gap-6 md:gap-10 pl-4">
+                  {/* Index number */}
+                  <div className="w-6 flex-shrink-0 pt-1.5">
+                    <span className="text-xs font-mono text-zinc-700 tabular-nums select-none">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
                   </div>
-                );
-              })()}
 
-              {/* Title */}
-              <div className="mb-3">
-                <h3 className="text-lg font-semibold text-white leading-snug group-hover:text-indigo-300 transition-colors duration-200">
-                  {project.titleNode ?? (() => {
-                    const titleHref = project.liveUrl ?? project.githubUrl ?? project.slidesUrl;
-                    return titleHref ? (
-                      <a href={titleHref} target="_blank" rel="noopener noreferrer">
-                        {project.title}
-                      </a>
-                    ) : project.title;
-                  })()}
-                </h3>
-                {project.subtitle && (
-                  <p className="text-sm text-zinc-500 mt-0.5">{project.subtitle}</p>
-                )}
-              </div>
+                  {/* Content */}
+                  <div className="flex-1 min-w-0">
+                    {/* Title row */}
+                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-6 mb-3">
+                      <div>
+                        <h3 className="text-xl md:text-2xl font-bold leading-tight">
+                          {project.titleNode ??
+                            (href ? (
+                              <a
+                                href={href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-white hover:text-zinc-300 transition-colors duration-200"
+                              >
+                                {project.title}
+                              </a>
+                            ) : (
+                              <span className="text-white">{project.title}</span>
+                            ))}
+                        </h3>
+                        {project.subtitle && (
+                          <p className="text-sm text-zinc-500 mt-1">
+                            {project.subtitle}
+                          </p>
+                        )}
+                      </div>
 
-              {/* Description */}
-              <p className="text-sm text-zinc-400 leading-relaxed mb-6 flex-1">
-                {project.description}
-              </p>
+                      {/* Links */}
+                      <div className="flex items-center gap-4 flex-shrink-0 sm:pt-1.5">
+                        {project.liveUrl && (
+                          <a
+                            href={project.liveUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-xs font-medium text-zinc-500 hover:text-white transition-colors duration-200"
+                          >
+                            live ↗
+                          </a>
+                        )}
+                        {project.githubUrl && (
+                          <a
+                            href={project.githubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-xs font-medium text-zinc-600 hover:text-zinc-300 transition-colors duration-200"
+                          >
+                            source ↗
+                          </a>
+                        )}
+                        {project.slidesUrl && (
+                          <a
+                            href={project.slidesUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-xs font-medium text-zinc-600 hover:text-zinc-300 transition-colors duration-200"
+                          >
+                            slides ↗
+                          </a>
+                        )}
+                      </div>
+                    </div>
 
-              {/* Tech tags */}
-              <div className="flex flex-wrap gap-2 mb-5">
-                {project.tech.map((t) => (
-                  <span
-                    key={t}
-                    className="text-xs px-2.5 py-1 rounded-full bg-zinc-700/60 text-zinc-300 border border-zinc-700"
-                  >
-                    {t}
-                  </span>
-                ))}
-              </div>
+                    {/* Description */}
+                    <p className="text-sm text-zinc-400 leading-relaxed mb-4 max-w-2xl">
+                      {project.description}
+                    </p>
 
-              {/* Links */}
-              {(project.liveUrl || project.githubUrl || project.slidesUrl) && (
-                <div className="flex items-center gap-3 pt-4 border-t border-zinc-700/40">
-                  {project.liveUrl && (
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs font-medium text-zinc-300 hover:text-white flex items-center gap-1.5 transition-colors duration-200"
-                    >
-                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                      </svg>
-                      live demo
-                    </a>
-                  )}
-                  {project.githubUrl && (
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs font-medium text-zinc-400 hover:text-zinc-200 flex items-center gap-1.5 transition-colors duration-200"
-                    >
-                      <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
-                      </svg>
-                      source
-                    </a>
-                  )}
-                  {project.slidesUrl && (
-                    <a
-                      href={project.slidesUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs font-medium text-zinc-400 hover:text-zinc-200 flex items-center gap-1.5 transition-colors duration-200"
-                    >
-                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
-                      </svg>
-                      view slides
-                    </a>
-                  )}
+                    {/* Tech stack */}
+                    <p className="text-xs font-mono text-zinc-600">
+                      {project.tech.join(" / ")}
+                    </p>
+                  </div>
                 </div>
-              )}
-            </div>
-          ))}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
